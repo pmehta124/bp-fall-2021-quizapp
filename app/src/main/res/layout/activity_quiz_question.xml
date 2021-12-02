@@ -7,54 +7,59 @@
         android:layout_height="match_parent"
         tools:context=".QuizQuestionActivity">
 
-    <ScrollView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:scaleX="150" android:scaleY="150" tools:layout_editor_absoluteY="32dp">
-        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
-                      android:orientation="vertical"/>
-    </ScrollView>
     <LinearLayout
             android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content" app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" android:gravity="center">
         <TextView
-                android:text="What is New Jersey's state fruit?"
+                android:text="Question"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" android:id="@+id/Question"
-                android:translationY="200" android:textSize="24sp" android:gravity="center"/>
-        <ProgressBar
-                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_height="wrap_content" android:id="@+id/tv_question"
+                android:textSize="24sp" android:gravity="center"/>
+        <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:gravity="center" android:layout_weight="1"
+        >
+            <ProgressBar
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/progressBar" tools:visibility="visible" android:layout_weight="1"
+                    android:minHeight="50dp" android:max="5" android:progress="0"/>
+            <TextView
+                    android:text="0/5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:id="@+id/progressText" android:layout_weight="1"/>
+        </LinearLayout>
+        <RadioGroup
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/progressBar2" tools:visibility="visible" android:translationY="210"/>
-        <RadioButton
-                android:text="Grape"
-                android:layout_width="267dp"
-                android:layout_height="wrap_content" android:id="@+id/radioButton2"
-                android:gravity="center"/>
-        <RadioButton
-                android:text="Blueberry"
-                android:layout_width="267dp"
-                android:layout_height="wrap_content" android:id="@+id/radioButton3" android:translationX="50"
-                android:translationY="230"/>
-        <RadioButton
-                android:text="Raspberry"
-                android:layout_width="270dp"
-                android:layout_height="wrap_content" android:id="@+id/radioButton4" android:translationX="50"
-                android:translationY="240"/>
-        <RadioButton
-                android:text="Cherry"
-                android:layout_width="271dp"
-                android:layout_height="wrap_content" android:id="@+id/radioButton5" android:translationX="50"
-                android:translationY="250"/>
+                android:layout_height="match_parent" android:gravity="center" android:id="@+id/radioGroup">
+            <RadioButton
+                    android:layout_width="267dp"
+                    android:layout_height="wrap_content" android:id="@+id/choice1"
+                    android:text="Choice 1"/>
+            <RadioButton
+                    android:text="Choice 2"
+                    android:layout_width="267dp"
+                    android:layout_height="wrap_content" android:id="@+id/choice2"
+            />
+            <RadioButton
+                    android:text="Choice 3"
+                    android:layout_width="270dp"
+                    android:layout_height="wrap_content" android:id="@+id/choice3"
+            />
+            <RadioButton
+                    android:text="Choice 4"
+                    android:layout_width="271dp"
+                    android:layout_height="wrap_content" android:id="@+id/choice4"
+            />
+        </RadioGroup>
         <Button
                 android:text="Submit"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" android:id="@+id/button" android:translationY="260"/>
-        <TextView
-                android:text="Quiz App"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" android:id="@+id/textView4" android:translationY="-220"/>
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:id="@+id/button"/>
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

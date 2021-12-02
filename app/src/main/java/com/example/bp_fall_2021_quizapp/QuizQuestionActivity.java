@@ -2,8 +2,7 @@ package com.example.bp_fall_2021_quizapp;
 
 import android.content.Intent;
 import android.view.View;
-import android.widget.RadioButton;
-import android.widget.Toast;
+import android.widget.*;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 
@@ -11,9 +10,20 @@ import java.util.ArrayList;
 
 public class QuizQuestionActivity extends AppCompatActivity {
 
+
+//    public RadioButton getChoice1() {
+//
+//    }
     // UI components here
+    private TextView tvQuestion, tv_progress;
+    private RadioButton choice1, choice2, choice3, choice4;
+    private RadioGroup radioGroup;
+    private ProgressBar progressBar;
 
     // other variables here
+    private ArrayList<QuestionModel> qList;
+    private QuestionModel currentQuestion;
+    String name;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,11 +31,21 @@ public class QuizQuestionActivity extends AppCompatActivity {
         setContentView(R.layout.activity_quiz_question);
 
         // create arraylist of questions
-        ArrayList<QuestionModel> qList = new ArrayList<QuestionModel>();
-        // get username intent from main activity screen
-        savedInstanceState.get(namePrompt);
-        // initialize views using findViewByID
+        qList = new ArrayList<QuestionModel>();
 
+        // get username intent from main activity screen
+        Bundle bundle = getIntent().getExtras();
+        name = bundle.getString("namePrompt");
+
+        // initialize views using findViewByID
+        tvQuestion = findViewById(R.id.tv_question);
+        tv_progress = findViewById(R.id.progressText);
+        radioGroup = findViewById(R.id.radioGroup);
+        choice1 = findViewById(R.id.choice1);
+        choice2 = findViewById(R.id.choice2);
+        choice3 = findViewById(R.id.choice3);
+        choice4 = findViewById(R.id.choice4);
+        progressBar = findViewById(R.id.progressBar);
         // use helper method to add question content to arraylist
 
         // get total number of questions
@@ -40,7 +60,8 @@ public class QuizQuestionActivity extends AppCompatActivity {
      */
     private void addQuestions(){
         // question 1
-
+ //       (String question, String opt1, String opt2, String opt3, String opt4, int correctAnsNum
+    //    qList.add("What is New Jersey’s state fruit?", "Grape", "blue")
         // question 2
 
         // question 3

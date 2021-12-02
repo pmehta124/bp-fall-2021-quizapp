@@ -41,6 +41,7 @@ public class MainActivity extends AppCompatActivity {
         // If user has entered name, begin quiz
 
         Intent intent = new Intent(this, QuizQuestionActivity.class);
+        intent.putExtra("namePrompt", name);
         startActivity(intent);
         finish(); // close current activity
         }
