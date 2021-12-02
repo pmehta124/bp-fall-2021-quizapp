@@ -21,9 +21,9 @@ public class QuizQuestionActivity extends AppCompatActivity {
         setContentView(R.layout.activity_quiz_question);
 
         // create arraylist of questions
-
+        ArrayList<QuestionModel> qList = new ArrayList<QuestionModel>();
         // get username intent from main activity screen
-
+        savedInstanceState.get(namePrompt);
         // initialize views using findViewByID
 
         // use helper method to add question content to arraylist
