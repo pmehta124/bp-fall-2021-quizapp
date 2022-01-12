@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
         // set name variable every time user clicks "start"
         String name = nameInput.getText().toString();
         // If the name field is empty, prompt user to enter name
-        if(name.equals("")) {
+        if(name.isEmpty()) {
             Toast.makeText (getBaseContext(), "Please enter your name", Toast.LENGTH_SHORT).show();
         }
         // If user has entered name, begin quiz

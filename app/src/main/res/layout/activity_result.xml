@@ -5,6 +5,51 @@
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".ResultActivity">
+        tools:context=".ResultActivity" android:id="@+id/result">
 
+    <ImageView
+            android:layout_width="142dp"
+            android:layout_height="123dp" app:srcCompat="@drawable/transparent_quiz_app_logo"
+            android:id="@+id/imageView2"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="134dp"
+            app:layout_constraintTop_toTopOf="parent" android:layout_marginTop="25dp" android:layout_marginEnd="135dp"
+            app:layout_constraintEnd_toEndOf="parent" android:layout_marginBottom="32dp"
+            app:layout_constraintBottom_toTopOf="@+id/textView"/>
+    <TextView
+            android:text="TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/name"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="235dp" app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="477dp" android:layout_marginEnd="176dp"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="177dp" app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintVertical_bias="1.0"/>
+    <TextView
+            android:text="TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/answers"
+            android:layout_marginTop="192dp"
+            app:layout_constraintTop_toBottomOf="@+id/name" android:layout_marginEnd="176dp"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="177dp" app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="266dp"/>
+    <TextView
+            android:text="TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/score"
+            android:layout_marginBottom="85dp"
+            app:layout_constraintBottom_toTopOf="@+id/answers" android:layout_marginEnd="178dp"
+            app:layout_constraintEnd_toEndOf="parent" android:layout_marginTop="88dp"
+            app:layout_constraintTop_toBottomOf="@+id/name" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="175dp" app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintVertical_bias="0.0"/>
+    <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/restart"
+            android:onClick="restart" app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="161dp"
+            android:layout_marginTop="62dp" app:layout_constraintTop_toBottomOf="@+id/answers"
+            android:layout_marginEnd="162dp" app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" android:layout_marginBottom="155dp"
+            android:background="#9C27B0"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
